@@ -1,6 +1,6 @@
 {
   "name": "lg-fullscreen.js",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Fullscreen module for lightgallery.",
   "keywords": [
     "gallery",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/sachinchoolur/lg-fullscreen.js/issues"
   },
-  "license": "Apache-2.0",
+  "license": "GPLv3",
   "author": {
     "name": "Sachin N",
     "email": "sachi77n@gmail.com",
@@ -54,6 +54,6 @@
     "build-min": "uglifyjs dist/lg-fullscreen.js --comments '/@license/' -m screw_ie8=true -c screw_ie8=true,unused=false -o dist/lg-fullscreen.min.js",
     "build-watch": "watchify src/lg-fullscreen.js -s LgFullscreen -t [babelify] -o dist/lg-fullscreen.js -v",
     "dev": "watchify src/lg-fullscreen.js -s LgFullscreen -t [babelify] -o ../lightgallery.js/lightgallery/js/lg-fullscreen.js -v",
-    "lint": "jshint src/*.js"
+    "lint": "jshint src"
   }
 }
