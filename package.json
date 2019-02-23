@@ -1,6 +1,6 @@
 {
   "name": "lg-fullscreen.js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Fullscreen module for lightgallery.",
   "keywords": [
     "gallery",
@@ -53,7 +53,7 @@
     "build-debug": "browserify src/lg-fullscreen.js -s LgFullscreen -t [babelify] -p [bannerify --file .banner ] -o dist/lg-fullscreen.js",
     "build-min": "uglifyjs dist/lg-fullscreen.js --comments '/@license/' -m screw_ie8=true -c screw_ie8=true,unused=false -o dist/lg-fullscreen.min.js",
     "build-watch": "watchify src/lg-fullscreen.js -s LgFullscreen -t [babelify] -o dist/lg-fullscreen.js -v",
-    "dev": "watchify src/lg-fullscreen.js -s LgFullscreen -t [babelify] -o ../lightgallery.js/lightgallery/js/lg-fullscreen.js -v",
+    "dev": "watchify src/lg-fullscreen.js -s LgFullscreen -t [babelify] -o /Users/sachin/workspace/lightgallery-js/gh-pages/lightgallery.js/lightgallery/js/lg-fullscreen.js -v",
     "lint": "jshint src"
   }
 }
