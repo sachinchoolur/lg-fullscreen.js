@@ -2,6 +2,15 @@ var fullscreenDefaults = {
     fullScreen: true
 };
 
+function isFullScreen() {
+    return (
+        document.fullscreenElement ||
+        document.mozFullScreenElement ||
+        document.webkitFullscreenElement ||
+        document.msFullscreenElement
+    );
+}
+
 var Fullscreen = function(element) {
 
     this.el = element;
@@ -68,11 +77,10 @@ Fullscreen.prototype.fullScreen = function() {
     });
 
     utils.on(this.core.outer.querySelector('.lg-fullscreen'), 'click.lg', function() {
-        if (!document.fullscreenElement &&
-            !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
-            _this.requestFullscreen();
-        } else {
+        if (isFullScreen()) {
             _this.exitFullscreen();
+        } else {
+            _this.requestFullscreen();
         }
     });
 
@@ -81,7 +89,9 @@ Fullscreen.prototype.fullScreen = function() {
 Fullscreen.prototype.destroy = function() {
 
     // exit from fullscreen if activated
-    this.exitFullscreen();
+    if(isFullScreen()) {
+        this.exitFullscreen();
+    }
 
     utils.off(document, '.lgfullscreen');
 };
