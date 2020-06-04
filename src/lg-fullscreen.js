@@ -32,7 +32,7 @@ Fullscreen.prototype.init = function() {
             !document.mozFullScreenEnabled && !document.msFullscreenEnabled) {
             return;
         } else {
-            fullScreen = '<button aria-label="Toggle fullscreen" class="lg-fullscreen lg-icon"></button>';
+            fullScreen = '<button type="button" aria-label="Toggle fullscreen" class="lg-fullscreen lg-icon"></button>';
             this.core.outer.querySelector('.lg-toolbar').insertAdjacentHTML('beforeend', fullScreen);
             this.fullScreen();
         }
